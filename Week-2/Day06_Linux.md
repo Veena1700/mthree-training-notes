@@ -24,7 +24,7 @@ cd folder_name  # Changes the current directory
 cd Documents   # Moves into the Documents folder
 cd ..          # Moves up one directory
 ```
-![Linux Commands](images/day-06/screenshot1.jpg)
+![Linux Commands](../images/day-06/screenshot1.jpg)
 
 ### Creating Files and Directories
 ```sh
@@ -34,7 +34,7 @@ touch file_name  # Creates an empty file
 touch {1..5}.txt  # Creates files 1.txt, 2.txt, 3.txt, 4.txt, and 5.txt
 ```
 
-![Linux Commands](images/day-06/screenshot2.jpg)
+![Linux Commands](../images/day-06/screenshot2.jpg)
 
 ### Removing Files and Directories
 ```sh
@@ -51,7 +51,7 @@ mv oldname.txt newname.txt  # Renames or moves a file
 mv file.txt /home/user/Documents/  # Moves a file to another location
 ```
 
-![Linux Commands](images/day-06/screenshot3.jpg)
+![Linux Commands](../images/day-06/screenshot3.jpg)
 
 ### Writing and Appending Text
 ```sh
@@ -60,7 +60,7 @@ echo "Hello" > file.txt  # Writes text to a file (overwrites content)
 echo "New line" >> file.txt  # Appends text to a file
 ```
 
-![Linux Commands](images/day-06/screenshot4.jpg)
+![Linux Commands](../images/day-06/screenshot4.jpg)
 
 ### History and Help Commands
 ```sh
@@ -78,7 +78,7 @@ grep -Ril "error" log.txt  # Searches for specific text in a file
 # -l: Show only filenames with matches
 ```
 
-![Linux Commands](images/day-06/screenshot5.jpg)
+![Linux Commands](../images/day-06/screenshot5.jpg)
 
 ## File Permissions
 
@@ -119,7 +119,7 @@ chmod 720 file.txt  # Sets permissions
   chmod 720 file.txt  # Owner: rwx (7), Group: w (2), Others: no permissions (0)
   ```
 
-![Linux Commands](images/day-06/screenshot6.jpg)
+![Linux Commands](../images/day-06/screenshot6.jpg)
 
 ### System Monitoring Commands
 ```sh
@@ -132,4 +132,4 @@ ps aux  # Lists currently running processes
 sed 's/old/new/g' file.txt  # Modifies file content without opening it
 sed -i 's/old/new/g' file.txt  # Modifies and saves file content without opening it
 ```
-![Linux Commands](images/day-06/screenshot7.jpg)
+![Linux Commands](../images/day-06/screenshot7.jpg)
