@@ -10,12 +10,16 @@
 - `touch x/y/file.txt` → Creates a file inside `y`.
 - `rmdir -p x/y/z` → Removes only `z` because `y` is not empty.
 
+![Linux Commands](../images/day-07/screenshot2.jpg)
+
 ### System Information Commands
 - `uname -a` → Displays all system information (kernel name, version, architecture, etc.).
 - `uname -s` → Shows the kernel name (e.g., Linux).
 - `uname -r` → Displays the kernel release version.
 - `uname -m` → Shows the system architecture (e.g., x86_64).
 - `uname` → By default, prints the kernel name (same as `uname -s`).
+
+![Linux Commands](../images/day-07/screenshot3.jpg)
 
 ### Process Management Commands
 - `ps aux` → Lists all running processes with detailed information.
@@ -34,19 +38,27 @@
 - `wc -c filename.txt` → Counts the number of bytes (characters) in the file `filename.txt`.
 - `wc *` → Counts words, lines, and bytes for all files in the current directory.
 
+![Linux Commands](../images/day-07/screenshot4.jpg)
+
 ### Calendar Commands
 - `ncal` → Displays the current month's calendar.
 - `ncal 12 2025` → Displays the calendar for December 2025.
 - `ncal -3` → Displays the previous, current, and next months' calendars.
 - `ncal 1990` → Displays the calendar for the entire year 1990.
 
+![Linux Commands](../images/day-07/screenshot5.jpg)
+
 ### File Finding Commands
 - `find -name "*.txt"` → Finds all files with a `.txt` extension in the current directory and subdirectories.
 - `find . -type d` → Finds all directories (excluding files) starting from the current directory (`.`).
 - `find . -name "*.tmp" -exec rm {} \;` → Finds all files with a `.tmp` extension in the current directory and subdirectories and removes them.
 
+  ![Linux Commands](../images/day-07/screenshot6.jpg)
+
 ### Command History and Filtering
 - `history | grep command` → Displays the list of all previously used commands in the terminal. The `|` is the pipe operator, passing the output to `grep` which searches through history for the specified command.
+
+  ![Linux Commands](../images/day-07/screenshot7.jpg)
 
 ### Archiving and Compression
 - `tar -cvf archive.tar directory/`
@@ -66,6 +78,8 @@
 
 - `tar -xzvf archive.tar.gz`
 - `-z`: Decompresses the archive using gzip.
+
+  ![Linux Commands](../images/day-07/screenshot8.jpg)
 
 ### Aliases and Network Commands
 - `alias j1="ls -lrt"` → Creates an alias named `j1` for the `ls -lrt` command.
@@ -90,4 +104,4 @@
 - `unset var_1` → Removes the variable `var_1`.
 - `echo $var_1` → Prints an empty line if `var_1` was unset.
 - `readonly var_2` → Makes `var_2` read-only.
-- `read username` → Waits for user input and assigns it to a va
+- `read username` → Waits for user input and assigns it to a variable.
