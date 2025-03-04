@@ -41,7 +41,7 @@ Stages `file.txt` for the next commit.
 
 ### 6. `git commit` (Commit Changes)  
 ```sh
-git commit -m "Initial commit"  
+git commit -m "Initial commit "  
 ```
 Commits the staged changes with a message.  
 
