@@ -9,6 +9,10 @@ This project demonstrates a comprehensive Kubernetes application specially adapt
 - Resource management
 - And much more!
 
+![Project Demo](../images/day-18/screenshot1.jpg)
+
+![Project Demo](../images/day-18/screenshot2.jpg)
+
 ## Prerequisites
 
 - Minikube
