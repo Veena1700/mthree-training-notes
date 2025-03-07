@@ -1,4 +1,4 @@
-# **Detailed Explanation**
+# **Detailed Explanation **
 
 ## **Overview**
 `k8s-master-app` is a **Kubernetes deployment** that automates setting up a Flask-based web application inside a **Minikube Kubernetes cluster**. It creates **namespaces, ConfigMaps, Secrets, Deployments, Services, and Autoscaling** while handling **WSL2 compatibility issues**
