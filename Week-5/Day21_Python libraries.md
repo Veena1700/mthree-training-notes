@@ -345,7 +345,7 @@ When inside the `basic-module` directory, running the following command:
 ```sh
 sqlite3 data
 ```
-![terminal](../images/day-21/screenshot1.jpg)
+![terminal](../images/day-21/screenshot2.JPG)
 
 ### Explanation:
 - `sqlite3 data` opens the `data` SQLite database file located in the current directory (`basic-module`).
@@ -359,7 +359,7 @@ When running the following command from the home directory:
 ```sh
 sqlite3 ~/basic-module/data
 ```
-![terminal](../images/day-21/screenshot1.jpg)
+![terminal](../images/day-21/screenshot1.JPG)
 
 ### Explanation:
 - `sqlite3 ~/basic-module/data` explicitly opens the `data` file located in `basic-module` from the home directory (`~` represents the home directory).
