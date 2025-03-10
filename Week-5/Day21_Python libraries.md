@@ -8,7 +8,6 @@ NumPy (Numerical Python) is an open-source library in Python used for numerical 
 - **Mathematical Operations**: It supports a wide range of mathematical operations such as linear algebra, Fourier transforms, and statistical calculations.
 - **Ease of Use**: NumPy integrates seamlessly with other scientific computing libraries like SciPy, Pandas, and Matplotlib.
 - **Broadcasting**: Allows element-wise operations on arrays of different shapes without explicit looping.
-- **Interoperability**: Can interface with C, C++, and Fortran for high-performance computing.
 
 ## Real-Life Applications of NumPy
 ### 1. **Data Science & Machine Learning**
