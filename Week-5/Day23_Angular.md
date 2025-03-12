@@ -1,4 +1,4 @@
-# Angular: A Comprehensive Overview
+# Angular
 
 ## What is Angular?
 
