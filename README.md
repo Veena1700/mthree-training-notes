@@ -29,7 +29,11 @@ MThree-Training-Notes/
 │   ├── Day20_Python concepts.md
 │
 ├── Week-5/
+│   ├── basic-angular-app/
+│   ├── hello-world/
 │   ├── Day21_Python libraries.md, Day21_Python-libraries.py
+│   ├── Day22_React.md
+│   ├── Day23_Angular.md
 └── README.md
 ```
 
@@ -57,6 +61,15 @@ MThree-Training-Notes/
 - `Day16_PythonDSA.md` → Python Data Structures & Algorithms.
 - `Day17_Kubernetes.md` → Deep dive into Kubernetes components.
 - `Day18_Kubernetes_Commands.md` → Essential Kubernetes commands for deployment and troubleshooting.
+- `Day19_OOP.md, OOP.py` → Object-Oriented Programming concepts in Python.
+- `Day20_Python concepts.md` → Various Python concepts.
+
+### Week 5: Angular & React
+- `Day21_Python libraries.md, Day21_Python-libraries.py` → Python libraries and their applications.
+- `Day22_React.md` → Introduction to React.js.
+- `Day23_Angular.md` → Basics of Angular.
+- `basic-angular-app/` → Angular project setup and implementation.
+- `hello-world/` → A simple React starter project.
 
 ---
 
@@ -71,3 +84,4 @@ MThree-Training-Notes/
    cat Day07_LinuxCommands-BasicShellScripting.md
    ```
 ---
+
