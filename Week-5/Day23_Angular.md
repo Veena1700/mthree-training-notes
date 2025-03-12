@@ -194,9 +194,9 @@ Add this component to your **app.component.html**:
 ```html
 <app-color-changer></app-color-changer>
 ```
-<div style="text-align: center;">
-  <img src="../images/day-23/screenshot1.jpg" style="width: 75%;" alt="Image">
-</div>
+<p align="center">
+  <img src="../images/day-23/screenshot1.jpg" width="75%" alt="Image">
+</p>
 
 ## Explanation
 1. **TypeScript (`color-changer.component.ts`)**
@@ -262,10 +262,6 @@ export class AppComponent {
 - The `<nav>` element provides navigation links using `routerLink` to navigate between pages without refreshing.
 - `<router-outlet>` is a placeholder that displays the routed component based on the current URL.
 
-<div style="text-align: center;">
-  <img src="../images/day-23/screenshot2.jpg" style="width: 75%;" alt="Image">
-</div>
-
 ### home.component.ts (Home Component)
 ```typescript
 import { Component } from '@angular/core';
@@ -282,9 +278,9 @@ export class HomeComponent {
 - The `HomeComponent` is a simple component that acts as the landing page of the application.
 - It has its own HTML and CSS file for structure and styling.
 
-<div style="text-align: center;">
-  <img src="../images/day-23/screenshot3.jpg" style="width: 75%;" alt="Image">
-</div>
+<p align="center">
+  <img src="../images/day-23/screenshot2.jpg" width="75%" alt="Image">
+</p>
 
 ### about.component.ts (About Component)
 ```typescript
@@ -301,9 +297,9 @@ export class AboutComponent {
 **Explanation:**
 - Similar to the `HomeComponent`, the `AboutComponent` displays information about the application.
 
-<div style="text-align: center;">
-  <img src="../images/day-23/screenshot2.jpg" style="width: 75%;" alt="Image">
-</div>
+<p align="center">
+  <img src="../images/day-23/screenshot3.jpg" width="75%" alt="Image">
+</p>
 
 ### contact.component.ts (Contact Component)
 ```typescript
@@ -319,6 +315,10 @@ export class ContactComponent {
 ```
 **Explanation:**
 - The `ContactComponent` provides details about how users can get in touch.
+
+<p align="center">
+  <img src="../images/day-23/screenshot4.jpg" width="75%" alt="Image">
+</p>
 
 ### app-routing.module.ts (Routing Configuration)
 ```typescript
