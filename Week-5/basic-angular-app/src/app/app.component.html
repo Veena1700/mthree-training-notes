@@ -1,0 +1,21 @@
+<div class="container">
+  <h1> Color Change App</h1>
+  <p> This is a Color Change App</p>
+  <div class="color-change">
+    <h2>Color Change</h2>
+    <div class="color-box" [style.backgroundColor]="currentColor"></div>
+    <div class="color-controls">
+      <button (click)="changeColor('red')">Red</button>
+      <button (click)="changeColor('blue')">Blue</button>
+      <button (click)="changeColor('green')">Green</button>
+      <button (click)="changeColor('purple')">Purple</button>
+      </div>
+  </div>
+</div>
+
+<nav>
+  <a routerLink="/">Home</a>
+  <a routerLink="/about">About</a>
+  <a routerLink="/contact">Contact</a>
+</nav>
+<router-outlet></router-outlet>
