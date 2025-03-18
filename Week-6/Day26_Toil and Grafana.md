@@ -240,7 +240,7 @@ After running the script, visit `http://localhost:3000` to access **Grafana dash
   5. Click **"Apply"** to save.
 
 <p align="center">
-  <img src="../images/day-26/screenshot4.jpg" width="75%" alt="Image">
+  <img src="../images/day-26/screenshot4.JPG" width="75%" alt="Image">
 </p>
   
   ## Step 4: Add an Error Logs Panel  
@@ -255,7 +255,7 @@ After running the script, visit `http://localhost:3000` to access **Grafana dash
   4. Click **"Apply"**.
 
 <p align="center">
-  <img src="../images/day-26/screenshot3.jpg" width="75%" alt="Image">
+  <img src="../images/day-26/screenshot3.JPG" width="75%" alt="Image">
 </p>
   
   ## Step 5: Add a CPU Usage Metrics Panel  
@@ -269,7 +269,7 @@ After running the script, visit `http://localhost:3000` to access **Grafana dash
   5. Click **"Apply"**.
 
 <p align="center">
-  <img src="../images/day-26/screenshot2.jpg" width="75%" alt="Image">
+  <img src="../images/day-26/screenshot2.JPG" width="75%" alt="Image">
 </p>
   
   ## Step 6: Add a Log Volume Panel  
@@ -283,7 +283,7 @@ After running the script, visit `http://localhost:3000` to access **Grafana dash
   5. Click **"Apply"**.
 
 <p align="center">
-  <img src="../images/day-26/screenshot1.jpg" width="75%" alt="Image">
+  <img src="../images/day-26/screenshot1.JPG" width="75%" alt="Image">
 </p>
   
   ## Step 7: Arrange and Resize Panels  
@@ -292,7 +292,7 @@ After running the script, visit `http://localhost:3000` to access **Grafana dash
   3. Organize metrics logically.
 
 <p align="center">
-  <img src="../images/day-26/screenshot5.jpg" width="75%" alt="Image">
+  <img src="../images/day-26/screenshot5.JPG" width="75%" alt="Image">
 </p>
   
   ## Step 8: Configure Dashboard Settings  
