@@ -1,3 +1,78 @@
+# Learning Prometheus and Loki Queries for Grafana
+
+## Prometheus Basics
+
+Prometheus is a time-series database used for monitoring and alerting. PromQL (Prometheus Query Language) is its query language.
+
+### Basic PromQL Concepts:
+
+1. *Metrics and Labels*: Metrics are time-series data points with labels (key-value pairs)
+   - Example: http_requests_total{status="200", method="GET"}
+
+2. *Key Functions*:
+   - rate(): Calculate per-second rate of increase
+   - sum(): Aggregate values
+   - by(): Group by specific labels
+   - avg(), min(), max(): Statistical operations
+
+## Loki Basics
+
+Loki is a log aggregation system designed to work with Grafana. LogQL is its query language.
+
+### Basic LogQL Concepts:
+
+1. *Log Stream Selection*: Uses labels to select log streams
+   - Example: {app="nginx", env="production"}
+
+2. *Log Content Filtering*:
+   - Example: {app="nginx"} |= "ERROR"
+
+3. *Log Parsing and Metrics Extraction*:
+   - Use | pattern or | json operators to extract fields
+
+## Using Prometheus in Grafana
+
+### Step 1: Add Prometheus Data Source
+1. Navigate to Configuration > Data Sources
+2. Click "Add data source"
+3. Select "Prometheus"
+4. Enter your Prometheus server URL (typically http://localhost:9090)
+5. Click "Save & Test"
+
+### Step 2: Create a Dashboard
+1. Click "+ Create" > "Dashboard"
+2. Click "Add new panel"
+
+### Step 3: Write Prometheus Queries
+1. In the panel editor, select "Prometheus" as the data source
+2. In the query field, enter your PromQL:
+   
+   rate(http_requests_total{job="api-server"}[5m])
+   
+3. Use the "Metrics browser" to explore available metrics
+4. Apply functions using the Function dropdown
+
+## Using Loki in Grafana
+
+### Step 1: Add Loki Data Source
+1. Navigate to Configuration > Data Sources
+2. Click "Add data source"
+3. Select "Loki"
+4. Enter your Loki server URL
+5. Click "Save & Test"
+
+### Step 2: Create a Logs Panel
+1. In your dashboard, add a new panel
+2. Select "Logs" as the visualization
+
+### Step 3: Write Loki Queries
+1. Select "Loki" as the data source
+2. Enter your LogQL:
+   
+   {app="nginx"} |= "ERROR" | json
+   
+3. Use the "Log browser" to explore available log streams
+   
 # Exporting and Importing Grafana Dashboard as JSON  
 
 ## 1. Export Grafana Dashboard as JSON  
@@ -37,7 +112,6 @@
 
 5. **Click ‘Import’**  
    - The dashboard will be imported and available in your Grafana dashboards.
-
 ---
 
 ## Access Grafana
@@ -123,8 +197,6 @@
 ## 3. Viewing the Imported Dashboard  
 - After importing, navigate to **Dashboards → Manage** to find your dashboard.  
 - Click on the imported dashboard to start monitoring your data.
-
----
 
 <p align="center">
   <img src="../images/day-27/screenshot1.JPG" width="75%" alt="Image">
