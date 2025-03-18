@@ -72,7 +72,7 @@
   1. Click **"Add panel"** → **Select Loki**.  
   2. Use this query to filter error logs:  
      ```
-     {namespace="sample-app"} |= "ERROR"
+     { namespace="sample-app" } |= "ERROR"
      ```  
   3. Configure:  
      - **Title:** "Error Logs"  
