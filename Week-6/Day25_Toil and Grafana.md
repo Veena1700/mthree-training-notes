@@ -203,7 +203,85 @@ wait $PORT_FORWARD_PID
 - Provides **login details**.
 - Keeps the script running for **port-forwarding**.
 
----
+## Access Grafana
+  1. Ensure Grafana is running:
+     ```bash
+     kubectl port-forward svc/grafana -n monitoring 3000:80
+     ```
+  2. Open **http://localhost:3000** in your browser.  
+  3. Log in with:  
+     - **Username:** admin  
+     - **Password:** admin  
+  
+  ## Create a New Dashboard  
+  1. Click the **"+" icon** on the left sidebar.  
+  2. Select **"Dashboard"** → **"Add a new panel"**.  
+  
+  ## Configure a Logs Panel  
+  1. Select **"Loki"** as the data source.  
+  2. Enter the query:  
+     ```
+     {namespace="sample-app"}
+     ```  
+  3. Choose **"Logs"** visualization.  
+  4. Set panel title: **"Application Logs"** → Enable **"Show time"**.  
+  5. Click **"Apply"** to save.
+
+<p align="center">
+  <img src="../images/day-26/screenshot4.JPG" width="75%" alt="Image">
+</p>
+  
+  ## Add an Error Logs Panel  
+  1. Click **"Add panel"** → **Select Loki**.  
+  2. Use this query to filter error logs:  
+     ```
+     { namespace="sample-app" } |= "ERROR"
+     ```  
+  3. Configure:  
+     - **Title:** "Error Logs"  
+     - Enable **"Show labels"**  
+  4. Click **"Apply"**.
+
+<p align="center">
+  <img src="../images/day-26/screenshot3.JPG" width="75%" alt="Image">
+</p>
+  
+  ## Add a CPU Usage Metrics Panel  
+  1. Click **"Add panel"** → **Select Prometheus**.  
+  2. Enter the query:  
+     ```
+     sum(rate(container_cpu_usage_seconds_total{namespace="sample-app"}[5m])) by (pod)
+     ```  
+  3. Select **"Time series"** visualization.  
+  4. Set title: **"CPU Usage by Pod"** → Configure legend & unit as **percent**.  
+  5. Click **"Apply"**.
+
+<p align="center">
+  <img src="../images/day-26/screenshot2.JPG" width="75%" alt="Image">
+</p>
+  
+  ## Add a Log Volume Panel  
+  1. Click **"Add panel"** → **Select Loki**.  
+  2. Change query type to **Instant**.  
+  3. Enter:  
+     ```
+     sum(count_over_time({namespace="sample-app"}[5m])) by (pod_name)
+     ```  
+  4. Choose **"Time series"** → Set title to **"Log Volume by Pod"**.  
+  5. Click **"Apply"**.
+
+<p align="center">
+  <img src="../images/day-26/screenshot1.JPG" width="75%" alt="Image">
+</p>
+  
+  ## Arrange and Resize Panels  
+  1. Drag panels to reposition.  
+  2. Resize by dragging panel corners.  
+  3. Organize metrics logically.
+
+<p align="center">
+  <img src="../images/day-26/screenshot5.JPG" width="75%" alt="Image">
+</p>
 
 ## **7. Conclusion**
 This script fully automates **Kubernetes monitoring** using:
