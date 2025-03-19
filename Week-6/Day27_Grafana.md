@@ -43,7 +43,7 @@ Prometheus is integrated using the `prometheus_client` library:
   - `ERROR_COUNTER`: Tracks error occurrences.
   - `ACTIVE_REQUESTS`: Monitors active requests in processing.
 - **How It Works in Code:**
-  - These metrics are defined in `app.py`:
+  - These metrics are defined in `app.py`: 
     ```python
     REQUEST_COUNT = Counter(
         'app_request_count', 
@@ -160,10 +160,84 @@ promtail:
 ```
 
 ---
-### Different visulaisations in grafana based on this app
+### Grafana Dashboards & Visualizations for Application Metrics
 <p align="center">
   <img src="../images/day-27/screenshot2.jpg" width="75%" alt="Image">
 </p><p align="center">
   <img src="../images/day-27/screenshot3.jpg" width="75%" alt="Image">
 </p><p align="center">
   <img src="../images/day-27/screenshot4.jpg" width="75%" alt="Image">
+
+---
+
+# **Key Metrics in Prometheus for Observability**  
+
+## **Latency**  
+**Definition:** How long it takes to serve a customer from when they order.  
+**In our script:** We measure how long each web request takes to complete using `app_request_latency_seconds`. Just like timing how long it takes from a customer ordering food until they receive it.  
+
+## **Traffic**  
+**Definition:** How many customers are coming in per hour.  
+**In our script:** We count incoming requests with `app_request_count`. This is like having a counter at the restaurant door that clicks each time someone enters.  
+
+## **Errors**  
+**Definition:** How many orders are returned or complaints received.  
+**In our script:** We track HTTP error codes (like `500` errors) and explicit error counters. This is like tracking how many dishes are sent back to the kitchen or how many customers complain.  
+
+## **Saturation**  
+**Definition:** How close the restaurant is to maximum capacity.  
+**In our script:** We use `app_active_requests` to see how many requests are being processed simultaneously. This is like counting how many tables are occupied at once in the restaurant.  
+
+---
+
+# **Observability Foundations**  
+
+Think of operating a commercial airplane:  
+
+- **Metrics:** Quantitative measurements like altitude, speed, and fuel level.  
+  - **In our script:** Prometheus collects precise numbers about our system's performance, like counting requests or measuring response times.  
+
+- **Logs:** The flight recorder (black box) that captures detailed events.  
+  - **In our script:** Our application writes detailed logs with timestamps and request IDs, collected by Loki. This is like recording every action taken by pilots and every system event.  
+
+- **Visualization:** The cockpit dashboard that displays important readings.  
+  - **In our script:** Grafana creates visual dashboards that make it easy to understand system behavior at a glance.  
+
+- **Instrumentation:** The sensors throughout the aircraft that capture data.  
+  - **In our script:** We've added code to the application to capture key information about its behavior.  
+
+---
+
+# **Health Monitoring**  
+
+Think of a doctor checking a patient's health:  
+
+- **Liveness Probes:** Checking if the patient is alive (basic pulse check).  
+  - **In our script:** The `/health/liveness` endpoint tells Kubernetes if our application is running at all.  
+
+- **Readiness Probes:** Determining if the patient can perform activities.  
+  - **In our script:** The `/health/readiness` endpoint checks if our application can handle requests properly.  
+
+- **Health Endpoints:** Different types of medical tests (blood pressure, temperature, etc.).  
+  - **In our script:** We have different endpoints that check different aspects of health.  
+
+- **Dependency Checks:** Making sure all organs are functioning together.  
+  - **In our script:** We verify our "database connection" is working before declaring the app ready.  
+
+---
+
+# **Service Level Objectives (SLO) Building Blocks**  
+
+Think of a pizza delivery promise:  
+
+- **Error Rate Tracking:** Monitoring how many pizzas are delivered incorrectly.  
+  - **In our script:** We track how many requests result in errors.  
+
+- **Latency Histograms:** Recording delivery times across all orders.  
+  - **In our script:** We track request durations in different "buckets" to understand response time patterns.  
+
+- **Request Success Rate:** Calculating what percentage of pizzas are delivered correctly.  
+  - **In our script:** We can determine what percentage of requests complete successfully.  
+
+These are the building blocks to create promises like **"95% of pizzas will be delivered correctly within 30 minutes"** (similar to **"99.9% of requests will complete successfully in under 500ms"**).  
+
