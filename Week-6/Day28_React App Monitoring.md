@@ -48,7 +48,7 @@ This document explains the complete setup script for a React-based SRE (Site Rel
   - Logs the successful creation of the React app.
  
   <p align="center">
-  <img src="../images/day-28/screenshot1.JPG" width="75%" alt="Image">
+  <img src="../images/day-28/screenshot2.jpg" width="75%" alt="Image">
 </p>
 
 ### Adding SRE Instrumentation: `create_react_sre_files()`
