@@ -1,0 +1,47 @@
+# Kubernetes deployment content - copy from Angular Dockerfile artifact
+# Kubernetes deployment file
+# Save this as angular-ui-deployment.yaml
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-ui
+  namespace: sre-monitoring
+  labels:
+    app: angular-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: angular-ui
+  template:
+    metadata:
+      labels:
+        app: angular-ui
+    spec:
+      containers:
+      - name: angular-ui
+        image: angular-ui:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 200m
+            memory: 256Mi
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 30
+          periodSeconds: 20
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 10
+---
