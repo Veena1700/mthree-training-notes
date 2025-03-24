@@ -271,12 +271,7 @@ Defines how the Flask API is deployed within Kubernetes and how it integrates wi
 
 This Angular SRE dashboard provides a real-time monitoring solution for API and application health, integrating metrics, alerts, and logs into a unified interface. The `apiService` is central to data retrieval, while different components handle visualization and filtering.
 
-# Angular UI Deployment with Docker, Nginx, and Kubernetes
-
-## Overview
-This document explains the deployment setup of the Angular UI application using Docker, Nginx, and Kubernetes. It covers the creation of necessary configuration files and deployment strategies.
-
----
+## Angular UI Deployment with Docker, Nginx, and Kubernetes
 
 ## Dockerfile Setup
 This Dockerfile will define the containerization of the Angular UI application.
