@@ -28,8 +28,11 @@ This document explains how the React SRE application was modified to integrate w
    The backend exposes all collected metrics on the `/metrics` endpoint in a format that Prometheus can scrape.
    
 <p align="center">
-  <img src="../images/day-29/screenshot3.JPG" width="48%" />
-  <img src="../images/day-29/screenshot5.jpg" width="48%" />
+  <img src="../images/day-29/screenshot3.JPG" width="95%" />
+</p>
+
+<p>
+  <img src="../images/day-29/screenshot5.jpg" width="95%" />
 </p>
 
 ### Code Walkthrough
@@ -97,8 +100,12 @@ if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5001)
 ```
 <p align="center">
-  <img src="../images/day-29/screenshot1.JPG" width="48%" />
-  <img src="../images/day-29/screenshot2.jpg" width="48%" />
+  <img src="../images/day-29/screenshot1.JPG" width="95%" />
+</p>
+
+<p>
+  
+  <img src="../images/day-29/screenshot2.jpg" width="95%" />
 </p>
 
 ### Explanation
