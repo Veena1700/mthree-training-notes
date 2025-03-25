@@ -19,7 +19,7 @@ This repository contains all the necessary scripts and configurations to set up 
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/sre-app.git
+   git clone https://github.com/Veena1700/mthree-training-notes/Week-7/sre-app.git
    cd sre-app
    ```
 
